@@ -4,6 +4,7 @@
 #include "./commands/list.h"
 #include "./commands/add.h"
 #include "./commands/remove.h"
+#include "./commands/complete.h"
 
 using namespace std;
 
@@ -30,7 +31,7 @@ int main(int argc, char* argv[]) {
     } else if (command == "-r") {
       Commands::remove(atoi(argv[2]));
     } else if (command == "-c") {
-      Commands::remove(atoi(argv[2]));
+      Commands::complete(atoi(argv[2]));
     } else {
       cout << "Unsupported argument" << endl;
       Commands::help();
