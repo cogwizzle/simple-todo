@@ -5,8 +5,8 @@ using namespace std;
 
 namespace Commands {
   void add(string task) {
-    char* home = getenv("HOME");
-    const char* todoFileName = strcat(home, "/.todo.txt");
+    string home = getenv("HOME");
+    const string todoFileName = home + "/.todo.txt";
     cout << "Adding task: " << task << endl;
     ofstream todoFile;
     todoFile.open(todoFileName, std::ios_base::app);

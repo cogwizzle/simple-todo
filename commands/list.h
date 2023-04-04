@@ -5,8 +5,8 @@ using namespace std;
 
 namespace Commands {
   void list() {
-    char* home = getenv("HOME");
-    const char* todoFileName = strcat(home, "/.todo.txt");
+    string home = getenv("HOME");
+    const string todoFileName = home + "/.todo.txt";
     cout << "Listing tasks" << endl;
     ifstream todoFile;
     todoFile.open(todoFileName);
