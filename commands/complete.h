@@ -15,7 +15,6 @@ namespace Commands {
     string todoFileName = home + "/.todo.txt";
     string tempFileName = home + "/.temp.txt";
     string doneFileName = home + "/.todo/" + to_string(day) + "-" + to_string(month) + "-" + to_string(year) + ".txt";
-    cout << "Completing task: " << task << endl;
     ifstream todoFile;
     ofstream tempFile;
     ofstream doneFile;

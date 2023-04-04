@@ -8,6 +8,7 @@ namespace Commands {
     string home = getenv("HOME");
     const string todoFileName = home + "/.todo.txt";
     cout << "Listing tasks" << endl;
+    cout << "-------------" << endl;
     ifstream todoFile;
     todoFile.open(todoFileName);
     string line;

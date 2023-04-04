@@ -8,7 +8,6 @@ namespace Commands {
     string home = getenv("HOME");
     string todoFileName = home + "/.todo.txt";
     string tempFileName = home + "/.temp.txt";
-    cout << "Removing task: " << task << endl;
     ifstream todoFile;
     ofstream tempFile;
     todoFile.open(todoFileName);

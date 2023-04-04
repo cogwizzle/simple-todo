@@ -7,7 +7,6 @@ namespace Commands {
   void add(string task) {
     string home = getenv("HOME");
     const string todoFileName = home + "/.todo.txt";
-    cout << "Adding task: " << task << endl;
     ofstream todoFile;
     todoFile.open(todoFileName, std::ios_base::app);
     todoFile << task << endl;
