@@ -1,8 +1,8 @@
 build:
-	g++ -o todo main.cpp
+	g++ -o build/todo main.cpp
 
 install:
-	cp todo /usr/local/bin
+	cp build/todo /usr/local/bin
 
 run:
 	./todo
