@@ -4,6 +4,8 @@
 using namespace std;
 
 namespace Commands {
+#ifndef ADD_H
+#define ADD_H
   void add(string task) {
     string home = getenv("HOME");
     const string todoFileName = home + "/.todo.txt";
@@ -13,4 +15,5 @@ namespace Commands {
     todoFile.close();
     cout << "Task added." << endl;
   }
+#endif
 }

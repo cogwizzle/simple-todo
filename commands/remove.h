@@ -4,6 +4,8 @@
 using namespace std;
 
 namespace Commands {
+#ifndef REMOVE_H
+#define REMOVE_H
   void remove(int task) {
     string home = getenv("HOME");
     string todoFileName = home + "/.todo.txt";
@@ -25,4 +27,5 @@ namespace Commands {
     std::remove(todoFileName.c_str());
     rename(tempFileName.c_str(), todoFileName.c_str());
   }
+#endif
 }

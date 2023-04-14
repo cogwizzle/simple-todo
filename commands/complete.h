@@ -4,6 +4,8 @@
 using namespace std;
 
 namespace Commands {
+#ifndef COMPLETE_H
+#define COMPLETE_H
   void complete(int task) {
     time_t now = time(0);
     tm *ltm = localtime(&now);
@@ -37,4 +39,5 @@ namespace Commands {
     std::remove(todoFileName.c_str());
     rename(tempFileName.c_str(), todoFileName.c_str());
   }
+#endif
 }
