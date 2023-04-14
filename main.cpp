@@ -5,6 +5,7 @@
 #include "./commands/add.h"
 #include "./commands/remove.h"
 #include "./commands/complete.h"
+#include "./commands/historical.h"
 
 using namespace std;
 
@@ -32,6 +33,10 @@ int main(int argc, char* argv[]) {
       Commands::remove(atoi(argv[2]));
     } else if (command == "-c") {
       Commands::complete(atoi(argv[2]));
+    } else if (command == "-h") {
+      Commands::help();
+    } else if (command == "-H") {
+      Commands::historicalList(argv[2]);
     } else {
       cout << "Unsupported argument" << endl;
       Commands::help();
