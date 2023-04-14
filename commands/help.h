@@ -14,6 +14,7 @@ namespace Commands {
     cout << " -r {index} Removes a task" << endl;
     cout << " -c {index} Completes a task" << endl;
     cout << " -H {date}  Lists all the tasks for a given date" << endl;
+    cout << " -H         Lists all days where previous task were complete" << endl;
     cout << " -h         Prints out this help" << endl;
   }
 #endif

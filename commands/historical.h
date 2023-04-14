@@ -17,7 +17,7 @@ namespace Commands {
     const string directory = home + "/.todo/";
     // List files in directory
     for (const auto & entry : filesystem::directory_iterator(directory)) {
-      string fileName = entry.path().filename();
+      string fileName = entry.path().stem();
       cout << fileName << endl;
     }
   }
