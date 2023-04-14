@@ -36,7 +36,10 @@ int main(int argc, char* argv[]) {
     } else if (command == "-h") {
       Commands::help();
     } else if (command == "-H") {
-      Commands::historicalList(argv[2]);
+      if (argc > 2)
+        Commands::historicalList(argv[2]);
+      else
+        Commands::listAllDates();
     } else {
       cout << "Unsupported argument" << endl;
       Commands::help();
